@@ -591,6 +591,224 @@ section {
   font-size: 0.9rem;
 }
 
+/* Assets Side by Side Layout */
+.assets-side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.asset-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.asset-card {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  padding: 2rem;
+}
+
+.asset-card h3 {
+  font-size: 1.3rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+}
+
+.asset-info-compact {
+  margin: 1.5rem 0;
+}
+
+.asset-info-compact p {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--steel-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.asset-info-compact strong {
+  color: var(--dark-navy);
+}
+
+.asset-returns-compact {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.return-item {
+  text-align: center;
+}
+
+.return-val {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.return-lbl {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--steel-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.deal-tags-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.asset-location-image {
+  position: relative;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  border: 1px solid var(--primary);
+  border-top: none;
+}
+
+.asset-location-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(31, 42, 56, 0.9));
+  color: var(--white);
+  padding: 2rem 1.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Investment Strategy Section Enhanced */
+.investment-strategy-section {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.strategy-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.strategy-section-header h2 {
+  font-size: 1.8rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.75rem;
+}
+
+.strategy-subtitle {
+  color: var(--steel-grey);
+  font-size: 1.1rem;
+}
+
+.strategy-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.strategy-pillar {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.strategy-pillar h4 {
+  font-size: 1rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.75rem;
+}
+
+.strategy-pillar p {
+  font-size: 0.9rem;
+  color: var(--steel-grey);
+  line-height: 1.6;
+}
+
+.strategy-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.metric-box {
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.metric-box.highlight {
+  background: var(--gradient);
+  border-radius: 8px;
+}
+
+.metric-box.highlight .metric-value,
+.metric-box.highlight .metric-label {
+  color: var(--white);
+}
+
+.metric-value {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--steel-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+/* Responsive for assets side by side */
+@media (max-width: 900px) {
+  .assets-side-by-side {
+    grid-template-columns: 1fr;
+  }
+  
+  .strategy-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .strategy-metrics {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
 /* Operators Section */
 .operators-section {
   margin-top: 3rem;
@@ -1058,5 +1276,356 @@ section {
   
   .metric-value {
     font-size: 1.8rem;
+  }
+}
+
+/* Language Toggle */
+.lang-toggle {
+  background: transparent;
+  border: 1px solid var(--steel-grey);
+  color: var(--steel-grey);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lang-toggle:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.lang-toggle-mobile {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.lang-toggle-mobile:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: white;
+}
+
+/* Exit Paths / Desinversión Section */
+.exit-paths {
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.exit-paths-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.exit-paths-header h2 {
+  margin-top: 0.5rem;
+}
+
+.exit-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.exit-path-card {
+  background: var(--white);
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.exit-path-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(110, 127, 163, 0.15);
+}
+
+.exit-path-number {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.exit-path-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-navy);
+}
+
+.exit-path-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.potential-buyers {
+  text-align: center;
+  background: var(--dark-navy);
+  padding: 2.5rem;
+  border-radius: 8px;
+}
+
+.potential-buyers h4 {
+  color: var(--white);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.buyers-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+}
+
+.buyer-name {
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .exit-paths-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buyers-logos {
+    gap: 1rem 1.5rem;
+  }
+  
+  .buyer-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* Deal Tags */
+.deal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.deal-tag {
+  background: var(--gradient);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Transparency Section */
+.transparency-section {
+  padding: 4rem 5rem;
+  background: var(--light-grey);
+  margin-top: 3rem;
+}
+
+.transparency-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.transparency-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.transparency-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.transparency-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.transparency-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.transparency-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark-navy);
+}
+
+.transparency-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 5rem;
+  background: var(--dark-navy);
+  margin-top: 0;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-header h2 {
+  color: white;
+}
+
+.contact-header .section-label {
+  color: var(--secondary);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.contact-form select {
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-form select option {
+  background: var(--dark-navy);
+  color: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: rgba(255,255,255,0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(110, 127, 163, 0.4);
+}
+
+.form-disclaimer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Mobile responsive for new sections */
+@media (max-width: 1024px) {
+  .transparency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .transparency-section,
+  .contact-section {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .transparency-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transparency-section,
+  .contact-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .deal-tags {
+    justify-content: center;
   }
 }
